@@ -1,0 +1,16 @@
+*.pyc
+.coverage
+.coverage.*
+.idea/
+.pytest_cache/
+.tox
+build/
+cov.xml
+dist/
+htmlcov/
+poetry.lock
+uv.lock
+qrcode.egg-info/
+venv/
+__pycache__/
+*.egg-info/
