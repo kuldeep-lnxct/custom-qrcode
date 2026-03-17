@@ -80,6 +80,7 @@ qr --style=c2 -O background_path=bg.jpg -O contrast=0.2 -O brightness=0.1 -o qr.
 | A1, A2, SP1 (SVG) | `text_position` | Where to place text: `top`, `bottom`, `left`, `right` (default `bottom`) |
 | A1, A2, SP1 (SVG) | `text_color`, `text_font_size` | Text fill color (hex) and size in viewBox units (optional) |
 | A1, A2, SP1 (SVG) | `svg_margin` | Margin (quiet zone) around the QR in module units; default is width/5. Use 0 or 1 for a tighter crop |
+| A1, A2, SP1 (SVG) | `svg_size` | Output width and height of the SVG in pixels (e.g. 400 for 400×400). If not set, size is derived from box_size and border |
 | A2 | `content_line_type` | `horizontal`, `vertical`, `interlock`, `radial`, `tl-br`, `tr-bl`, `cross` |
 | A2 | `content_point_scale`, `content_point_opacity`, colors | Same as A1 |
 | C2 | `background_path` | Path to image file (center-cropped to square if not square) |

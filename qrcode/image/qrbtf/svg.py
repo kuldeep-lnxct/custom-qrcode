@@ -95,6 +95,8 @@ class QrbtfSvgImage(BaseImage):
         self.text_font_size = float(text_fs) if text_fs is not None else None
         svg_margin = kwargs.pop("svg_margin", None)
         self.svg_margin = float(svg_margin) if svg_margin is not None else None
+        svg_size = kwargs.pop("svg_size", None)
+        self.svg_size = int(svg_size) if svg_size is not None else None
         super().__init__(*args, **kwargs)
 
     def new_image(self, **kwargs):
@@ -103,12 +105,13 @@ class QrbtfSvgImage(BaseImage):
         size = n + 2 * margin
         view_box = f"{-margin} {-margin} {size} {size}"
         # Use local name "svg" and set xmlns so default namespace applies to all children
+        output_size = self.svg_size if self.svg_size is not None else self.pixel_size
         svg = ET.Element(
             "svg",
             xmlns=self._svg_ns,
             viewBox=view_box,
-            width=f"{self.pixel_size}",
-            height=f"{self.pixel_size}",
+            width=f"{output_size}",
+            height=f"{output_size}",
         )
         # Background image (center-fill of viewBox), embedded as data URI
         href = _image_to_data_uri(self.background_path, self.background_image)

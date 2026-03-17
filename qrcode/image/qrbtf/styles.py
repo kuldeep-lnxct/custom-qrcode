@@ -45,8 +45,8 @@ SVG_BACKGROUND_OPTS = frozenset({"background_path", "background_image"})
 SVG_LOGO_OPTS = frozenset({"logo_path", "logo_image", "logo_size", "logo_margin"})
 # Optional text on one side of the QR (SVG)
 SVG_TEXT_OPTS = frozenset({"text", "text_position", "text_color", "text_font_size"})
-# SVG view / margin (quiet zone around QR in module units)
-SVG_VIEW_OPTS = frozenset({"svg_margin"})
+# SVG view / margin / size (quiet zone in modules; output size in pixels)
+SVG_VIEW_OPTS = frozenset({"svg_margin", "svg_size"})
 
 # Default presets matching frontend (a1, a1c, a1p, a2, a2c, c2, sp1)
 A1_PRESETS = {

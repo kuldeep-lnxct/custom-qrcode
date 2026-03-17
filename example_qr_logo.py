@@ -25,6 +25,7 @@ img = make_qrbtf_a1_svg(
     content_point_color="#000000",
     positioning_point_color="#000000",
     logo_path="audio3.png",
+    svg_size="300",
     logo_size=10,
     logo_margin=0.5,
     svg_margin=0.5,  # reduce outer margin (default is width/5). Use 0 for minimal margin
